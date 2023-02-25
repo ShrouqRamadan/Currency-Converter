@@ -30,9 +30,41 @@ function getResult(result) {
 }
 
 converterBtn.addEventListener('click', function () {
-    document.querySelector('.equal').classList.remove('d-none')
-    var currencyFromValue = currencyFrom.value;
+    if(amount.value==""){
+        amount.classList.add('error-input')
+        document.querySelector('.label-amount').classList.add('text-danger');
+    }
+    else{
+        amount.classList.remove('error-input')
+        document.querySelector('.label-amount').classList.remove('text-danger');
+        document.querySelector('.equal').classList.remove('d-none');
+        var currencyFromValue = currencyFrom.value;
+    
+        getResult(currencyFromValue);
+        document.querySelector('.equal').classList.remove('d-none');
 
-    getResult(currencyFromValue)
+    }
+ 
 })
 
+
+amount.addEventListener('blur',function(){
+    if(amount.value==""){
+        amount.classList.add('error-input')
+        document.querySelector('.label-amount').classList.add('text-danger');
+    }
+    else{
+        amount.classList.remove('error-input')
+        document.querySelector('.label-amount').classList.remove('text-danger'); 
+    }
+})
+amount.addEventListener('input',function(){
+    if(amount.value==""){
+        amount.classList.add('error-input')
+        document.querySelector('.label-amount').classList.add('text-danger');
+    }
+    else{
+        amount.classList.remove('error-input')
+        document.querySelector('.label-amount').classList.remove('text-danger'); 
+    }
+})

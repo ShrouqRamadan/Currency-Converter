@@ -33,6 +33,9 @@ span {
     font-weight: 700;
 
 }
+.error-input{
+    border: red 1px solid !important;
+}
 
 @media only screen and (max-width: 768px) {
     .box {
