@@ -20,7 +20,7 @@ function getResult(result) {
             var currencyToValue = currencyTo.value;
             var currencyFromValue = currencyFrom.value;
             var solution = amount.value * allData[currencyToValue] + currencyToValue;
-            amountUser.innerHTML = amount.value + currencyFromValue;
+            amountUser.innerHTML = amount.value + currencyFromValue + "=";
             resulttUser.innerHTML = solution;
 
         }
@@ -37,11 +37,11 @@ converterBtn.addEventListener('click', function () {
     else{
         amount.classList.remove('error-input')
         document.querySelector('.label-amount').classList.remove('text-danger');
-        document.querySelector('.equal').classList.remove('d-none');
+        
         var currencyFromValue = currencyFrom.value;
     
         getResult(currencyFromValue);
-        document.querySelector('.equal').classList.remove('d-none');
+      
 
     }
  
