@@ -63,7 +63,7 @@ amount.addEventListener('input',function(){
         amount.classList.add('error-input')
         document.querySelector('.label-amount').classList.add('text-danger');
     }
-    else{
+    else{ 
         amount.classList.remove('error-input')
         document.querySelector('.label-amount').classList.remove('text-danger'); 
     }
